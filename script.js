@@ -134,58 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ===================================
-    // CONTACT FORM HANDLING
-    // ===================================
-    const contactForm = document.getElementById('contactForm');
-    const formSuccess = document.getElementById('formSuccess');
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                phone: document.getElementById('phone').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
-
-            // Validate form
-            if (!formData.name || !formData.phone || !formData.message) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-
-            // In a real implementation, you would send this data to a server
-            // For now, we'll just show a success message
-            console.log('Form submitted:', formData);
-
-            // Create mailto link as fallback
-            const subject = encodeURIComponent('Transportation Inquiry from ' + formData.name);
-            const body = encodeURIComponent(
-                `Name: ${formData.name}\n` +
-                `Phone: ${formData.phone}\n` +
-                `Email: ${formData.email || 'Not provided'}\n\n` +
-                `Message:\n${formData.message}`
-            );
-            
-            // Show success message
-            contactForm.style.display = 'none';
-            formSuccess.style.display = 'block';
-
-            // Optional: Open default email client
-            // window.location.href = `mailto:contact@devoraorlan.com?subject=${subject}&body=${body}`;
-
-            // Reset form after 5 seconds
-            setTimeout(function() {
-                contactForm.reset();
-                contactForm.style.display = 'block';
-                formSuccess.style.display = 'none';
-            }, 5000);
-        });
-    }
 
     // ===================================
     // SCROLL ANIMATIONS
@@ -269,47 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(script);
     }
 
-    // ===================================
-    // PREVENT FORM DOUBLE SUBMISSION
-    // ===================================
-    if (contactForm) {
-        let isSubmitting = false;
-        
-        contactForm.addEventListener('submit', function() {
-            if (isSubmitting) {
-                return false;
-            }
-            isSubmitting = true;
-            
-            // Re-enable after 3 seconds
-            setTimeout(function() {
-                isSubmitting = false;
-            }, 3000);
-        });
-    }
 
-    // ===================================
-    // ENHANCED PHONE NUMBER FORMATTING
-    // ===================================
-    const phoneInput = document.getElementById('phone');
-    
-    if (phoneInput) {
-        phoneInput.addEventListener('input', function(e) {
-            let value = e.target.value.replace(/\D/g, '');
-            
-            if (value.length > 0) {
-                if (value.length <= 3) {
-                    value = `(${value}`;
-                } else if (value.length <= 6) {
-                    value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
-                } else {
-                    value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
-                }
-            }
-            
-            e.target.value = value;
-        });
-    }
 
     // ===================================
     // PERFORMANCE: DEBOUNCE SCROLL EVENTS
