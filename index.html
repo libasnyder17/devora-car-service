@@ -3,412 +3,489 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Devora Orlan - Professional Transportation Drivers in Boca Raton, Florida. From Door to Door in Style. Airport, cruise port, and custom transportation services.">
-    <title>Devora Orlan - Professional Transportation Drivers | Boca Raton, FL</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Devora Car Service &ndash; Premium private transportation in Boca Raton, FL. Airport rides, private travel, family &amp; group transportation. Shomer Shabbat. (561) 929-6701.">
+    <title>Devora Car Service &ndash; Premium Private Transportation | Boca Raton, FL</title>
+    <link rel="icon" href="assets/images/brand/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <img src="assets/Just_Logo.jpg" alt="DtoD Logo" class="nav-logo-img">
-            </div>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo" aria-label="Devora Car Service Home">
+                <img src="assets/images/brand/just-logo.jpg" alt="" class="logo-img" aria-hidden="true">
+                <div class="logo-text-wrap">
+                    <span class="logo-name">Devora Car Service</span>
+                    <span class="logo-sub">Boca Raton, Florida</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks" role="list">
                 <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#vehicles" class="nav-link">Vehicles</a></li>
-                <li><a href="#safety" class="nav-link">Safety</a></li>
+                <li><a href="#fleet" class="nav-link">Fleet</a></li>
+                <li><a href="#airport" class="nav-link">Airport</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="bsd-text">בס״ד</div>
-            <a href="tel:5619296701" class="nav-phone">
-                <span class="phone-icon">📞</span> (561) 929-6701
-            </a>
+            <div class="nav-actions">
+                <span class="nav-bsd" aria-label="B'Siyata D'Shmaya">בס״ד</span>
+                <a href="tel:5619296701" class="nav-phone" aria-label="Call (561) 929-6701">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 2 .84h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L6.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    (561) 929-6701
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-overlay"></div>
+    <!-- HERO -->
+    <section id="home" class="hero" aria-label="Hero">
+        <div class="hero-video-wrap" aria-hidden="true">
+            <video class="hero-video" autoplay muted loop playsinline poster="assets/images/backgrounds/tesla-dark-city-mood.jpg">
+                <source src="assets/videos/airport-night.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
         <div class="hero-content">
-            <div class="hero-logo-container">
-                <img src="assets/logo_plus_tagline_Tesla.jpg" alt="Devora Orlan - From Door to Door in Style" class="hero-logo">
+            <div class="hero-eyebrow" data-animate="fade-up">
+                <span class="hero-bsd">בס״ד</span>
+                <span class="eyebrow-dot">&middot;</span>
+                <span class="hero-loc-pill">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    Boca Raton, Florida
+                </span>
             </div>
-            <h1 class="hero-title">Devora Orlan</h1>
-            <h2 class="hero-subtitle">Professional Transportation Drivers</h2>
-            <p class="hero-tagline">From Door to Door in Style</p>
-            <div class="hero-location">
-                <span class="location-icon">📍</span> Boca Raton, Florida
-            </div>
-            <div class="hero-buttons">
-                <a href="tel:5619296701" class="btn btn-primary">Call Now: (561) 929-6701</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            <h1 class="hero-title" data-animate="fade-up">
+                <span class="title-l1">From Door to Door</span>
+                <em class="title-l2">in Style</em>
+            </h1>
+            <p class="hero-byline" data-animate="fade-up">Devora Orlan &nbsp;&middot;&nbsp; Professional Transportation</p>
+            <p class="hero-trust" data-animate="fade-up">
+                Airport rides &ensp;&middot;&ensp; Private travel &ensp;&middot;&ensp; Family &amp; group transportation
+            </p>
+            <div class="hero-actions" data-animate="fade-up">
+                <a href="tel:5619296701" class="btn btn-gold">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 2 .84h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L6.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Book a Ride
+                </a>
+                <a href="#fleet" class="btn btn-glass">View Fleet</a>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <span>↓</span>
-        </div>
+        <a href="#services" class="scroll-cue" aria-label="Scroll to services">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
     </section>
 
-    <!-- Introduction Banner -->
-    <section class="intro-banner">
+    <!-- TRUST STRIP -->
+    <div class="trust-strip" role="region" aria-label="Key features">
         <div class="container">
-            <div class="intro-content">
-                <h3>Welcome to Professional Transportation Excellence</h3>
-                <p>We provide reliable, safe, and elegant transportation services for families, organizations, and private clients throughout South Florida. Our commitment to professionalism, discretion, and punctuality ensures that every journey is comfortable and stress-free.</p>
-            </div>
+            <ul class="trust-list" role="list">
+                <li class="trust-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+                    <span>Airport Specialists</span>
+                </li>
+                <li class="trust-sep" aria-hidden="true"></li>
+                <li class="trust-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <span>Shomer Shabbat</span>
+                </li>
+                <li class="trust-sep" aria-hidden="true"></li>
+                <li class="trust-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    <span>Family Friendly</span>
+                </li>
+                <li class="trust-sep" aria-hidden="true"></li>
+                <li class="trust-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Available 24/7</span>
+                </li>
+                <li class="trust-sep" aria-hidden="true"></li>
+                <li class="trust-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <span>Background Checked</span>
+                </li>
+            </ul>
         </div>
-    </section>
+    </div>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
+    <!-- SERVICES -->
+    <section id="services" class="section services-section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Our Service</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">Trust, Experience, and Professional Excellence</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="card-icon">🏆</div>
-                    <h3>Locally Operated</h3>
-                    <p>A professional transportation service based in Boca Raton, serving the South Florida community with dedication and care.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">✡️</div>
-                    <h3>All Drivers Shomer Shabbos</h3>
-                    <p>We understand and respect your values. Our drivers are Shomer Shabbos, providing service you can trust.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">👩‍✈️</div>
-                    <h3>Female Drivers Available</h3>
-                    <p>For your comfort and preference, we offer professional female drivers upon request.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">🛡️</div>
-                    <h3>Commercial Insurance</h3>
-                    <p>Commercial insurance coverage is available on select vehicles. Details provided upon request.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">✓</div>
-                    <h3>Background-Checked Drivers</h3>
-                    <p>All our drivers undergo thorough background checks to ensure your safety and security.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">💎</div>
-                    <h3>Discretion & Comfort</h3>
-                    <p>We focus on punctuality, discretion, and client comfort for every journey, every time.</p>
-                </div>
-            </div>
-            <div class="about-focus">
-                <h3>Ideal For:</h3>
-                <ul class="focus-list">
-                    <li>Families</li>
-                    <li>Schools</li>
-                    <li>Organizations</li>
-                    <li>Private Clients</li>
-                    <li>Corporate Transportation</li>
-                    <li>Special Events</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Services Offered</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">Professional Transportation for Every Need</p>
+            <div class="section-header" data-animate="fade-up">
+                <span class="eyebrow">What We Offer</span>
+                <h2 class="section-title">Reliable Service for Every Journey</h2>
+                <p class="section-sub">All transportation is arranged personally &mdash; call or text to book your ride.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">✈️</div>
+                <div class="service-card glass-card" data-animate="card">
+                    <div class="service-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+                    </div>
                     <h3>Airport Transportation</h3>
-                    <p>Reliable pickup and drop-off services to all South Florida airports. We monitor flight times to ensure we're always on schedule.</p>
+                    <p>Reliable pickup &amp; drop-off to all South Florida airports. We monitor flights to ensure timely arrivals.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🚢</div>
-                    <h3>Port of Miami - Cruise Transfers</h3>
-                    <p>Comfortable transportation to and from Port of Miami for your cruise vacations. Start and end your journey in style.</p>
+                <div class="service-card glass-card" data-animate="card">
+                    <div class="service-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 17l3-3 3 3 3-3 3 3 3-3 3 3M2 7h20M12 3v4"/></svg>
+                    </div>
+                    <h3>Cruise Port Transfers</h3>
+                    <p>Comfortable transfers to and from Port of Miami. Start and end your voyage in relaxed comfort.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🗺️</div>
-                    <h3>Custom Trips</h3>
-                    <p>Personalized transportation for any destination. Whether it's a special event or a custom itinerary, we're here for you.</p>
+                <div class="service-card glass-card" data-animate="card">
+                    <div class="service-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="M3 21v-1a9 9 0 0 1 18 0v1"/></svg>
+                    </div>
+                    <h3>Private Rides</h3>
+                    <p>Discreet, professional transportation for individuals and couples. Personalized service, every journey.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🎩</div>
-                    <h3>Chauffeur Services</h3>
-                    <p>Professional chauffeur services for business meetings, special occasions, or daily transportation needs.</p>
+                <div class="service-card glass-card" data-animate="card">
+                    <div class="service-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Family Transportation</h3>
+                    <p>Spacious vehicles with car seats for all ages. A safe, comfortable ride for the whole family.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🛣️</div>
+                <div class="service-card glass-card" data-animate="card">
+                    <div class="service-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <h3>School Transportation</h3>
+                    <p>Dependable school pickups &amp; drop-offs. Parents trust us with their most precious passengers.</p>
+                </div>
+                <div class="service-card glass-card" data-animate="card">
+                    <div class="service-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                    </div>
+                    <h3>Group Transportation</h3>
+                    <p>Sports teams, organizations, and large groups travel comfortably in our spacious transit van.</p>
+                </div>
+                <div class="service-card glass-card" data-animate="card">
+                    <div class="service-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+                    </div>
                     <h3>Long-Distance Travel</h3>
-                    <p>Extended journeys including Orlando, Tampa, and beyond. Travel in comfort for longer trips.</p>
+                    <p>Extended journeys including Orlando, Tampa, and beyond. Travel in comfort for any distance.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">⚽</div>
-                    <h3>Sports Teams</h3>
-                    <p>Reliable transportation for sports teams, ensuring your group arrives together and on time.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎒</div>
-                    <h3>School Pickups & Drop-offs</h3>
-                    <p>Safe and dependable school transportation services. Parents can trust us with their most precious cargo.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌟</div>
+                <div class="service-card glass-card" data-animate="card">
+                    <div class="service-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
                     <h3>Special Events</h3>
-                    <p>Transportation for weddings, celebrations, corporate events, and other special occasions.</p>
+                    <p>Weddings, celebrations, corporate events, and other occasions. Arrive and depart in style.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🛡️</div>
-                    <h3>Enhanced Security</h3>
-                    <p>Enhanced security accommodations available upon request. Providing peace of mind for high-profile clients and special security needs.</p>
-                </div>
-            </div>
-            <div class="services-note">
-                <p><strong>All services are coordinated directly by phone or message.</strong> We believe in personal communication to ensure every detail is perfect for your journey.</p>
             </div>
         </div>
     </section>
 
-    <!-- Vehicles Section -->
-    <section id="vehicles" class="vehicles-section">
+    <!-- FLEET -->
+    <section id="fleet" class="section fleet-section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-animate="fade-up">
+                <span class="eyebrow">Premium Vehicles</span>
                 <h2 class="section-title">Our Fleet</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">Comfort, Safety, and Modern Elegance</p>
+                <p class="section-sub">Clean, maintained, and selected for your comfort.</p>
             </div>
-            <div class="vehicles-grid">
-                <div class="vehicle-card featured">
-                    <div class="vehicle-image">
-                        <img src="assets/Just_Tesla.jpg" alt="Brand New Tesla Model Y" class="vehicle-img">
+            <div class="fleet-grid">
+                <article class="fleet-card glass-card" data-animate="card">
+                    <div class="fleet-img-wrap">
+                        <img src="assets/images/fleet/tesla-model-y-black-white.jpg" alt="Tesla Model Y in black &ndash; premium electric private ride" class="fleet-img" loading="lazy">
+                        <div class="fleet-img-overlay" aria-hidden="true"></div>
+                        <span class="fleet-badge">Electric</span>
                     </div>
-                    <div class="vehicle-info">
-                        <h3>Brand New Tesla Model Y</h3>
-                        <p class="vehicle-description">Experience the future of transportation with our pristine Tesla Model Y. Quiet, smooth, and environmentally friendly, perfect for executive travel and special occasions.</p>
-                        <ul class="vehicle-features">
-                            <li>Zero emissions electric vehicle</li>
-                            <li>Premium interior with exceptional comfort</li>
-                            <li>Advanced safety features</li>
-                            <li>Seats 4 passengers with large cargo space</li>
+                    <div class="fleet-info">
+                        <h3>Tesla Model Y</h3>
+                        <p class="fleet-type">Private Electric Ride</p>
+                        <p class="fleet-desc">Whisper-quiet, zero-emission travel. The Tesla Model Y delivers a smooth, premium ride with cutting-edge technology and exceptional comfort.</p>
+                        <ul class="fleet-feats" aria-label="Vehicle features">
+                            <li>Seats 4 passengers</li>
+                            <li>Zero-emission electric</li>
+                            <li>Advanced safety tech</li>
+                            <li>Generous cargo space</li>
                         </ul>
                     </div>
-                </div>
-                <div class="vehicle-card">
-                    <div class="vehicle-image">
-                        <img src="assets/Kia_carnival.png" alt="Kia Carnival" class="vehicle-img">
+                </article>
+                <article class="fleet-card glass-card" data-animate="card">
+                    <div class="fleet-img-wrap">
+                        <img src="assets/images/fleet/kia-carnival-side-door.jpg" alt="Kia Carnival MPV with open sliding door &ndash; family transportation" class="fleet-img" loading="lazy">
+                        <div class="fleet-img-overlay" aria-hidden="true"></div>
+                        <span class="fleet-badge">Family</span>
                     </div>
-                    <div class="vehicle-info">
+                    <div class="fleet-info">
                         <h3>Kia Carnival</h3>
-                        <p class="vehicle-description">Our Kia Carnival offers premium comfort for families and small groups. Modern amenities and ample space make every journey enjoyable.</p>
-                        <ul class="vehicle-features">
-                            <li>Comfortable seating for 7 passengers</li>
-                            <li>Modern entertainment system</li>
-                            <li>Climate control</li>
-                            <li>Smooth, quiet ride</li>
+                        <p class="fleet-type">Comfortable Family MPV</p>
+                        <p class="fleet-desc">Spacious and modern, the Kia Carnival is ideal for families and small groups. Easy entry, premium comfort, and room for car seats and luggage.</p>
+                        <ul class="fleet-feats" aria-label="Vehicle features">
+                            <li>Seats 7 passengers</li>
+                            <li>Sliding doors for easy entry</li>
+                            <li>Car seats available</li>
+                            <li>Ample luggage capacity</li>
                         </ul>
                     </div>
-                </div>
-                <div class="vehicle-card featured">
-                    <div class="vehicle-image">
-                        <img src="assets/Van.jpg" alt="12-Passenger Van" class="vehicle-img">
+                </article>
+                <article class="fleet-card glass-card" data-animate="card">
+                    <div class="fleet-img-wrap">
+                        <img src="assets/images/fleet/ford-transit-night.jpg" alt="Ford Transit van at night &ndash; spacious group transportation" class="fleet-img" loading="lazy">
+                        <div class="fleet-img-overlay" aria-hidden="true"></div>
+                        <span class="fleet-badge">Group</span>
                     </div>
-                    <div class="vehicle-info">
-                        <h3>12-Passenger Van</h3>
-                        <p class="vehicle-description">Perfect for larger groups, sports teams, and group events. Our passenger vans ensure everyone travels together comfortably.</p>
-                        <ul class="vehicle-features">
-                            <li>Spacious seating for 11 passengers</li>
-                            <li>Ample luggage space</li>
-                            <li>Ideal for group transportation</li>
-                            <li>Air conditioning throughout</li>
+                    <div class="fleet-info">
+                        <h3>Ford Transit</h3>
+                        <p class="fleet-type">Spacious Group Transportation</p>
+                        <p class="fleet-desc">The Ford Transit handles large groups effortlessly. Generous seating and luggage space make it perfect for group airport runs, sports teams, and events.</p>
+                        <ul class="fleet-feats" aria-label="Vehicle features">
+                            <li>Seats up to 11 passengers</li>
+                            <li>Expansive luggage area</li>
+                            <li>Full climate control</li>
+                            <li>Ideal for groups &amp; events</li>
                         </ul>
                     </div>
-                </div>
+                </article>
             </div>
-            <div class="amenities-section">
-                <h3>Standard Amenities in All Vehicles:</h3>
+
+            <!-- Amenities -->
+            <div class="amenities-row" data-animate="fade-up">
+                <h3 class="amenities-heading">Standard in Every Vehicle</h3>
                 <div class="amenities-grid">
-                    <div class="amenity-item">
-                        <span class="amenity-icon">👶</span>
-                        <p>Car Seats Available<br><small>All sizes for infants to children</small></p>
+                    <div class="amenity glass-card">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Spotlessly Clean</span>
                     </div>
-                    <div class="amenity-item">
-                        <span class="amenity-icon">✨</span>
-                        <p>Spotlessly Clean<br><small>Detailed before every journey</small></p>
+                    <div class="amenity glass-card">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        <span>Car Seats Available</span>
                     </div>
-                    <div class="amenity-item">
-                        <span class="amenity-icon">🔧</span>
-                        <p>Well-Maintained<br><small>Regular service and inspections</small></p>
+                    <div class="amenity glass-card">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <span>Background Checked</span>
                     </div>
-                    <div class="amenity-item">
-                        <span class="amenity-icon">❄️</span>
-                        <p>Climate Control<br><small>Perfect temperature year-round</small></p>
+                    <div class="amenity glass-card">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                        <span>Female Drivers Available</span>
+                    </div>
+                    <div class="amenity glass-card">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>Well-Maintained</span>
+                    </div>
+                    <div class="amenity glass-card">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span>Climate Controlled</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Safety & Standards Section -->
-    <section id="safety" class="safety-section">
+    <!-- AIRPORT -->
+    <section id="airport" class="airport-section" aria-labelledby="airport-h">
+        <div class="airport-bg-wrap" aria-hidden="true">
+            <img src="assets/images/services/airport-traveler-modest.jpg" alt="" class="airport-bg-img" loading="lazy">
+            <div class="airport-overlay"></div>
+        </div>
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Safety & Standards</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">Your Safety and Peace of Mind Are Our Top Priorities</p>
-            </div>
-            <div class="safety-content">
-                <div class="safety-intro">
-                    <p>We understand that when you choose a transportation service, you're not just selecting a ride—you're placing your trust in us. That's why we maintain the highest standards of safety, professionalism, and reliability.</p>
+            <div class="airport-layout">
+                <div class="airport-text" data-animate="fade-up">
+                    <span class="eyebrow">Our Specialty</span>
+                    <h2 id="airport-h" class="section-title">Airport Transportation</h2>
+                    <p class="airport-lead">We know airports: the early mornings, the late-night arrivals, the checked bags and the stress. That&rsquo;s why we built our service around making airport travel effortless.</p>
+                    <ul class="check-list" aria-label="Airport service highlights">
+                        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Door-to-door service &ndash; no parking hassles</li>
+                        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Flight monitoring for on-time pickup</li>
+                        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Early morning &amp; late-night rides available</li>
+                        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Luggage-friendly spacious vehicles</li>
+                        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Fort Lauderdale, Miami &amp; Palm Beach airports</li>
+                        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Cruise port transfers to Port of Miami</li>
+                    </ul>
+                    <a href="tel:5619296701" class="btn btn-gold">Book Airport Ride</a>
                 </div>
-                <div class="safety-grid">
-                    <div class="safety-card">
-                        <div class="safety-icon">🛡️</div>
-                        <h3>Commercial Insurance</h3>
-                        <p>Commercial insurance coverage is available on select vehicles. Details provided upon request.</p>
+                <div class="airport-stats" data-animate="fade-up">
+                    <div class="airport-stat glass-card">
+                        <span class="stat-num">3</span>
+                        <span class="stat-lbl">Airports Served</span>
                     </div>
-                    <div class="safety-card">
-                        <div class="safety-icon">👨‍✈️</div>
-                        <h3>Professional Drivers</h3>
-                        <p>Experienced, licensed drivers with extensive training in customer service and defensive driving techniques.</p>
+                    <div class="airport-stat glass-card">
+                        <span class="stat-num">24/7</span>
+                        <span class="stat-lbl">Early Mornings Too</span>
                     </div>
-                    <div class="safety-card">
-                        <div class="safety-icon">✓</div>
-                        <h3>Background Checks</h3>
-                        <p>Comprehensive background screening for all drivers ensures you're in safe, trustworthy hands.</p>
+                    <div class="airport-stat glass-card">
+                        <span class="stat-num">✈</span>
+                        <span class="stat-lbl">Flight Monitoring</span>
                     </div>
-                    <div class="safety-card">
-                        <div class="safety-icon">👪</div>
-                        <h3>Family-Friendly Service</h3>
-                        <p>We're a family-oriented, community-based service that understands the needs of families and children.</p>
+                    <div class="airport-stat glass-card">
+                        <span class="stat-num">0</span>
+                        <span class="stat-lbl">Parking Stress</span>
                     </div>
-                    <div class="safety-card">
-                        <div class="safety-icon">⏰</div>
-                        <h3>Reliable & Punctual</h3>
-                        <p>We respect your time. Our drivers arrive on schedule and plan routes to ensure timely arrivals.</p>
-                    </div>
-                    <div class="safety-card">
-                        <div class="safety-icon">🤫</div>
-                        <h3>Discreet & Professional</h3>
-                        <p>Your privacy matters. We provide professional service with complete discretion and respect.</p>
-                    </div>
-                </div>
-                <div class="safety-commitment">
-                    <h3>Our Commitment to You</h3>
-                    <p>Every member of our team is dedicated to providing safe, comfortable, and reliable transportation. We treat every client with the respect and care they deserve, and we take pride in being a service you can trust with your most important journeys.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <!-- COMFORT -->
+    <section id="comfort" class="section comfort-section" aria-labelledby="comfort-h">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">We're Here to Help Plan Your Transportation</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon">📞</div>
-                        <div class="contact-details">
-                            <h4>Phone</h4>
-                            <a href="tel:5619296701" class="contact-link">(561) 929-6701</a>
-                            <p class="contact-note">Primary contact - Call or text anytime</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div class="contact-details">
-                            <h4>Service Area</h4>
-                            <p>Boca Raton and surrounding areas</p>
-                            <p class="contact-note">Serving all of South Florida</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">⏰</div>
-                        <div class="contact-details">
-                            <h4>Availability</h4>
-                            <p>24/7 Transportation Services</p>
-                            <p class="contact-note">We're here when you need us</p>
-                        </div>
-                    </div>
-                    <div class="scheduling-note">
-                        <h4>How We Work</h4>
-                        <p><strong>All transportation is coordinated directly by phone or message.</strong></p>
-                        <p>We believe in personal communication to understand your specific needs and ensure every detail is handled perfectly. Simply call or text us to discuss your transportation requirements, and we'll take care of the rest.</p>
+            <div class="comfort-layout">
+                <div class="comfort-img-col" data-animate="fade-up">
+                    <div class="comfort-img-frame">
+                        <img src="assets/images/fleet/ford-transit-interior.jpg" alt="Spacious interior of our Ford Transit &ndash; comfortable seating with room for the whole group" class="comfort-img" loading="lazy">
                     </div>
                 </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Devora Orlan</h3>
-                    <p class="footer-tagline">From Door to Door in Style</p>
-                    <p>Professional Transportation Drivers</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#vehicles">Vehicles</a></li>
-                        <li><a href="#safety">Safety</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                <div class="comfort-text-col" data-animate="fade-up">
+                    <span class="eyebrow">Travel in Comfort</span>
+                    <h2 id="comfort-h" class="section-title">Space for Everyone</h2>
+                    <p class="comfort-lead">Whether you&rsquo;re a family with young children, a group traveling together, or just someone who values room to breathe &mdash; our vehicles are chosen and maintained for maximum comfort.</p>
+                    <ul class="check-list" aria-label="Comfort features">
+                        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Comfortable seating for groups up to 11</li>
+                        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Generous luggage and cargo space</li>
+                        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Climate control throughout</li>
+                        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Car seats for infants through children</li>
+                        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Spotlessly clean before every journey</li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Contact Us</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about-section" aria-labelledby="about-h">
+        <div class="container">
+            <div class="about-layout">
+                <div class="about-img-col" data-animate="fade-up">
+                    <div class="about-img-frame glass-card">
+                        <img src="assets/images/brand/devoraimage.jpeg" alt="Devora Orlan &ndash; founder of Devora Car Service" class="about-img" loading="lazy">
+                    </div>
+                </div>
+                <div class="about-text-col" data-animate="fade-up">
+                    <span class="eyebrow">Personal Service</span>
+                    <h2 id="about-h" class="section-title">About Devora Car Service</h2>
+                    <div class="about-bsd">בס״ד</div>
+                    <p class="about-lead">We&rsquo;re a locally operated, family-oriented transportation service based in Boca Raton, Florida &mdash; built on the belief that getting from place to place should feel safe, personal, and comfortable.</p>
+                    <p class="about-body">Every ride is handled with care, discretion, and professionalism. We understand the values of our community and take pride in being a service you can genuinely trust.</p>
+                    <div class="about-feats">
+                        <div class="about-feat"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>All drivers Shomer Shabbat</span></div>
+                        <div class="about-feat"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Female drivers available upon request</span></div>
+                        <div class="about-feat"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Thorough background checks on all drivers</span></div>
+                        <div class="about-feat"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Commercial insurance available on select vehicles</span></div>
+                        <div class="about-feat"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Serving families, schools, organizations &amp; private clients</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-h">
+        <div class="contact-bg-wrap" aria-hidden="true">
+            <img src="assets/images/fleet/tesla-home-pickup.jpg" alt="" class="contact-bg-img" loading="lazy">
+            <div class="contact-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="contact-content" data-animate="fade-up">
+                <span class="eyebrow eyebrow-gold">Ready to Ride?</span>
+                <h2 id="contact-h" class="section-title">Book Your Transportation</h2>
+                <p class="contact-lead">All bookings are arranged personally. We believe in direct communication to make every detail right for your journey.</p>
+                <div class="contact-methods">
+                    <a href="tel:5619296701" class="contact-card glass-card" aria-label="Call (561) 929-6701">
+                        <div class="cc-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 2 .84h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L6.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div class="cc-text">
+                            <span class="cc-label">Call Now</span>
+                            <span class="cc-value">(561) 929-6701</span>
+                        </div>
+                    </a>
+                    <a href="sms:5619296701" class="contact-card glass-card" aria-label="Text (561) 929-6701">
+                        <div class="cc-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <div class="cc-text">
+                            <span class="cc-label">Send a Text</span>
+                            <span class="cc-value">(561) 929-6701</span>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/15619296701" class="contact-card glass-card" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (561) 929-6701">
+                        <div class="cc-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        </div>
+                        <div class="cc-text">
+                            <span class="cc-label">WhatsApp</span>
+                            <span class="cc-value">(561) 929-6701</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="contact-meta">
+                    <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Boca Raton &amp; all of South Florida</span>
+                    <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Available 24/7 &mdash; including early mornings</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-row">
+                        <img src="assets/images/brand/just-logo.jpg" alt="Devora Car Service" class="footer-logo-img">
+                        <span class="footer-brand-name">Devora Car Service</span>
+                    </div>
+                    <p class="footer-tagline">From Door to Door in Style</p>
+                    <p class="footer-desc">Premium private transportation serving Boca Raton and South Florida.</p>
+                    <span class="footer-bsd">בס״ד</span>
+                </div>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <h3 class="footer-hdg">Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#fleet">Fleet</a></li>
+                        <li><a href="#airport">Airport</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-contact-col">
+                    <h3 class="footer-hdg">Contact</h3>
                     <p><a href="tel:5619296701">(561) 929-6701</a></p>
                     <p>Boca Raton, Florida</p>
-                    <p class="footer-hours">Available 24/7</p>
+                    <p>Available 24/7</p>
+                    <div class="footer-btns">
+                        <a href="tel:5619296701" class="footer-btn">Call Now</a>
+                        <a href="https://wa.me/15619296701" class="footer-btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Our Service</h4>
-                    <ul class="footer-features">
-                        <li>✓ Commercially Insured</li>
-                        <li>✓ Background-Checked Drivers</li>
-                        <li>✓ Female Drivers Available</li>
-                        <li>✓ All Drivers Shomer Shabbos</li>
+                <div class="footer-promise">
+                    <h3 class="footer-hdg">Our Promise</h3>
+                    <ul class="footer-checklist">
+                        <li>Shomer Shabbat drivers</li>
+                        <li>Female drivers available</li>
+                        <li>Background-checked</li>
+                        <li>Commercially insured</li>
+                        <li>Family-friendly service</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Devora Orlan - Professional Transportation Drivers. All rights reserved.</p>
-                <p class="footer-location">Proudly serving Boca Raton and South Florida</p>
+                <p>&copy; 2026 Devora Orlan &ndash; Devora Car Service. All rights reserved.</p>
+                <p>Proudly serving Boca Raton and South Florida</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
-    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
+    <!-- Scroll to top -->
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Back to top">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
