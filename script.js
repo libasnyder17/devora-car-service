@@ -118,32 +118,34 @@
       scrollTrigger: { trigger: '.trust-strip', start: 'top 90%', once: true },
     });
 
-    // fade-up elements
+    // fade-up elements — subtle scale bloom for premium feel
     gsap.utils.toArray('[data-animate="fade-up"]').forEach(function (el) {
       gsap.fromTo(el,
-        { opacity: 0, y: 40 },
+        { opacity: 0, y: 40, scale: 0.97 },
         {
-          opacity: 1, y: 0,
-          duration: 0.85,
+          opacity: 1, y: 0, scale: 1,
+          duration: 0.95,
           ease: 'power3.out',
-          scrollTrigger: { trigger: el, start: 'top 82%', once: true },
+          scrollTrigger: { trigger: el, start: 'top 84%', once: true },
         }
       );
     });
 
-    // Staggered cards
+    // Staggered cards — bloom from below
     gsap.utils.toArray('[data-animate="card"]').forEach(function (card, i) {
       gsap.fromTo(card,
-        { opacity: 0, y: 48 },
+        { opacity: 0, y: 52, scale: 0.96 },
         {
-          opacity: 1, y: 0,
-          duration: 0.72,
+          opacity: 1, y: 0, scale: 1,
+          duration: 0.78,
           ease: 'power3.out',
-          delay: (i % 4) * 0.07,
-          scrollTrigger: { trigger: card, start: 'top 88%', once: true },
+          delay: (i % 4) * 0.08,
+          scrollTrigger: { trigger: card, start: 'top 90%', once: true },
         }
       );
     });
+
+    initParallax();
   }
 
   function initObserverFallback() {
@@ -158,6 +160,33 @@
 
     document.querySelectorAll('[data-animate]').forEach(function (el) {
       io.observe(el);
+    });
+  }
+
+  // ============================================================
+  // PARALLAX BACKGROUNDS
+  // ============================================================
+  function initParallax() {
+    if (prefersReduced) return;
+    if (!window.gsap || !window.ScrollTrigger) return;
+
+    // Airport and Contact section bg images: slow downward drift as you scroll past
+    gsap.utils.toArray('.parallax-bg').forEach(function (img) {
+      var section = img.closest('section');
+      if (!section) return;
+      gsap.fromTo(img,
+        { y: 0 },
+        {
+          y: 70,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 0.6,
+          },
+        }
+      );
     });
   }
 

@@ -1053,6 +1053,38 @@ button { font-family: var(--body); cursor: pointer; }
     transform: translateY(0);
 }
 
+/* ==================  SCROLL SNAP  ================== */
+/* Gentle proximity snap — settles into place, never fights the user */
+html {
+    scroll-snap-type: y proximity;
+}
+
+#home {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+}
+
+#services,
+#fleet,
+#airport,
+#comfort,
+#about,
+#contact {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    scroll-margin-top: 68px;  /* clear the fixed navbar */
+}
+
+/* ==================  PARALLAX  ================== */
+/* Extra height so bg images don't gap when translated by GSAP */
+.airport-bg-img,
+.contact-bg-img {
+    height: 130%;
+    position: relative;
+    top: -15%;
+    will-change: transform;
+}
+
 /* ==================  REDUCED MOTION  ================== */
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
